@@ -15,6 +15,9 @@ html {
 
   --color-heading: #1b0760;
   --color-body: #919ca4;
+
+  --color-border: #ccc;
+  --boder-radius: 30px;
 }
 
 body {
@@ -227,11 +230,11 @@ a {
 .input {
   padding: 1.5rem 3.5rem;
   border: 1px solid var(--color-body);
-  border-radius: 30px;
+  border-radius: var(--boder-radius);
 
   outline:none;
   font-size: 2rem;
-  color: var(--color-heading);
+  color: var(--color-border);
   background-color: #fff;
 }
 
@@ -244,3 +247,52 @@ color: #cdcdcd;
     font-size: 1.5rem;
   }
 }
+
+/* input + button (input group) */
+.input-group {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--boder-radius);
+}
+
+.input-group .btn {
+  margin: 1px;
+}
+
+.input-group .input {
+  border: 0;
+  padding: 1.5rem 1rem;
+  flex:1;
+}
+
+/* Card */
+.card {
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #cccccc;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color:#fff;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color:#fff;
+}
+
+.card--accent .card__header {
+  background: var(--color-accent);
+  color:#fff;
+}
+
+/* .card--primary .card__body {
+  background: var(--color-secondary);
+  color:#fff;
+} */
